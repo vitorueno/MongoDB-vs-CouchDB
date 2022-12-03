@@ -4,3 +4,4 @@ venv/
 .env/ 
 __pycache__/
 artigos/
+string_conexao.py
