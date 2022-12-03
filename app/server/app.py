@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from server.routes.pessoa import router as PessoaRouter
 
+
 app = FastAPI()
 
 app.include_router(PessoaRouter, tags=['Pessoa'], prefix='/pessoa')
