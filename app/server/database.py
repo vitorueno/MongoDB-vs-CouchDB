@@ -1,8 +1,8 @@
 # from server.app import BANCO
 from .string_conexao import STRING_CONEXAO_MONGO, STRING_CONEXAO_COUCH
 
-# BANCO = 'mongo'
-BANCO = 'couch'
+BANCO = 'mongo'
+# BANCO = 'couch'
 
 
 # processar os resultados do BD em um dicionário python
