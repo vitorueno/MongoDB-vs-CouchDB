@@ -73,6 +73,10 @@ if BANCO == 'mongo':
             await pessoas_collection.delete_one({"_id": ObjectId(id)})
             return True
 
+    async def delete_pessoas():
+        await pessoas_collection.delete_many({})
+        return True
+
 
 elif BANCO == 'couch':
     import couchdb
@@ -135,3 +139,8 @@ elif BANCO == 'couch':
         if pessoa:
             database.delete(pessoa)
             return True
+
+    async def delete_pessoas():
+        for idPessoa in database:
+            database.delete(database[idPessoa])
+        return True

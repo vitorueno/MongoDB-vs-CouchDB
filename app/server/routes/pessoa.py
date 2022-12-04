@@ -7,7 +7,8 @@ from server.database import (
     delete_pessoa,
     retrieve_pessoa,
     retrieve_pessoas,
-    update_pessoa
+    update_pessoa,
+    delete_pessoas
 )
 
 from server.models.pessoa import (
@@ -70,4 +71,16 @@ async def delete_pessoa_data(id: str):
         )
     return ErrorResponseModel(
         "Erro: ", 404, f"pessoa {id} não existe"
+    )
+
+
+@router.delete("/", response_description="Pessoas deletadas do banco de dados")
+async def delete_pessoas_data():
+    deleted_pessoa = await delete_pessoas()
+    if deleted_pessoa:
+        return ResponseModel(
+            f"Pessoas removidas com sucesso", "Pessoas removidas"
+        )
+    return ErrorResponseModel(
+        "Erro: ", 404, f"erro ao remover pessoas"
     )
