@@ -1,0 +1,6 @@
+{
+    "nome": "string",
+    "email": "user@example.com",
+    "endereco": "string",
+    "idade": 20
+}
