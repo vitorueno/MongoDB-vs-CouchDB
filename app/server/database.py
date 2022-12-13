@@ -1,8 +1,8 @@
 # from server.app import BANCO
 from .string_conexao import STRING_CONEXAO_MONGO, STRING_CONEXAO_COUCH
 
-BANCO = 'mongo'
-# BANCO = 'couch'
+# BANCO = 'mongo'
+BANCO = 'couch'
 
 
 # processar os resultados do BD em um dicionário python
@@ -53,7 +53,6 @@ if BANCO == 'mongo':
     # atualiza a pessoa com o id especificado
 
     async def update_pessoa(id: str, data: dict):
-        # Return false if an empty request body is sent.
         if len(data) < 1:
             return False
         pessoa = await pessoas_collection.find_one({"_id": ObjectId(id)})
@@ -118,7 +117,6 @@ elif BANCO == 'couch':
     # atualiza a pessoa com o id especificado
 
     async def update_pessoa(id: str, data: dict):
-        # Return false if an empty request body is sent.
         if len(data) < 1:
             return False
         pessoa = database.get(id)

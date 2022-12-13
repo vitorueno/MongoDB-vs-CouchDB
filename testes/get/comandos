@@ -1,0 +1,104 @@
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 1_mongo1_n100_c1 && 
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 2_mongo2_n100_c1 && 
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 3_mongo3_n100_c1 
+
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 4_mongo1_n100_c10 &&
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 5_mongo2_n100_c10 &&
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 6_mongo3_n100_c10 
+
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 7_mongo1_n100_c100 &&
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 8_mongo2_n100_c100 &&
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 9_mongo3_n100_c100 
+
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 10_mongo1_n1000_c1 &&
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 11_mongo2_n1000_c1 &&
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 12_mongo3_n1000_c1 
+
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 13_mongo1_n1000_c10 &&
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 14_mongo2_n1000_c10 &&
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 15_mongo3_n1000_c10 
+
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 16_mongo1_n1000_c100 &&
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 17_mongo2_n1000_c100 &&
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 18_mongo3_n1000_c100 
+
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 19_mongo1_n1000_c1000 &&
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 20_mongo2_n1000_c1000 &&
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 21_mongo3_n1000_c1000 
+
+
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 22_mongo1_n10000_c1 &&
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 23_mongo2_n10000_c1 &&
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 24_mongo3_n10000_c1 &&
+
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 25_mongo1_n10000_c10 &&
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 26_mongo2_n10000_c10 &&
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 27_mongo3_n10000_c10 &&
+
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 28_mongo1_n10000_c100 &&
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 29_mongo2_n10000_c100 &&
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 30_mongo3_n10000_c100 
+
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 31_mongo1_n10000_c1000 &&
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 32_mongo2_n10000_c1000 &&
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 33_mongo3_n10000_c1000 &&
+
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 34_mongo1_n10000_c10000 &&
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 35_mongo2_n10000_c10000 &&
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 36_mongo3_n10000_c10000
+
+mongo: 
+erros em 1000 -c 1000
+erros em 10000 -c 1000
+não rodou 10000 -c 10000
+----------------------------------------------------------------------------------
+
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 37_couch1_n100_c1 && 
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 38_couch2_n100_c1 && 
+ab -n 100 -c 1 'http://localhost:8000/pessoa/' > 39_couch3_n100_c1 &&
+
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 40_couch1_n100_c10 &&
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 41_couch2_n100_c10 &&
+ab -n 100 -c 10 'http://localhost:8000/pessoa/' > 42_couch3_n100_c10 &&
+
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 43_couch1_n100_c100 &&
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 44_couch2_n100_c100 &&
+ab -n 100 -c 100 'http://localhost:8000/pessoa/' > 45_couch3_n100_c100 &&
+
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 46_couch1_n1000_c1 &&
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 47_couch2_n1000_c1 &&
+ab -n 1000 -c 1 'http://localhost:8000/pessoa/' > 48_couch3_n1000_c1 &&
+
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 49_couch1_n1000_c10 &&
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 50_couch2_n1000_c10 &&
+ab -n 1000 -c 10 'http://localhost:8000/pessoa/' > 51_couch3_n1000_c10 &&
+
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 52_couch1_n1000_c100 &&
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 53_couch2_n1000_c100 &&
+ab -n 1000 -c 100 'http://localhost:8000/pessoa/' > 54_couch3_n1000_c100 &&
+
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 55_couch1_n1000_c1000 &&
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 56_couch2_n1000_c1000 &&
+ab -n 1000 -c 1000 'http://localhost:8000/pessoa/' > 57_couch3_n1000_c1000 &&
+
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 58_couch1_n10000_c1 &&
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 59_couch2_n10000_c1 &&
+ab -n 10000 -c 1 'http://localhost:8000/pessoa/' > 60_couch3_n10000_c1 &&
+
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 61_couch1_n10000_c10 &&
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 62_couch2_n10000_c10 &&
+ab -n 10000 -c 10 'http://localhost:8000/pessoa/' > 63_couch3_n10000_c10 &&
+
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 64_couch1_n10000_c100 &&
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 65_couch2_n10000_c100 &&
+ab -n 10000 -c 100 'http://localhost:8000/pessoa/' > 66_couch3_n10000_c100 &&
+
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 67_couch1_n10000_c1000 &&
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 68_couch2_n10000_c1000 &&
+ab -n 10000 -c 1000 'http://localhost:8000/pessoa/' > 69_couch3_n10000_c1000 &&
+
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 70_couch1_n10000_c10000 &&
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 71_couch2_n10000_c10000 &&
+ab -n 10000 -c 10000 'http://localhost:8000/pessoa/' > 72_couch3_n10000_c10000
+
+

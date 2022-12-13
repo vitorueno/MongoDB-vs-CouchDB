@@ -1,0 +1,45 @@
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        uvicorn
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /pessoa/
+Document Length:        172 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   42.007 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      3170000 bytes
+Total body sent:        2560000
+HTML transferred:       1720000 bytes
+Requests per second:    238.05 [#/sec] (mean)
+Time per request:       4200.732 [ms] (mean)
+Time per request:       4.201 [ms] (mean, across all concurrent requests)
+Transfer rate:          73.69 [Kbytes/sec] received
+                        59.51 kb/s sent
+                        133.21 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    6   7.6      3      40
+Processing:    58 4165 745.1   4408    7255
+Waiting:        4 3762 667.8   3937    6798
+Total:         58 4171 740.1   4414    7256
+
+Percentage of the requests served within a certain time (ms)
+  50%   4414
+  66%   4445
+  75%   4467
+  80%   4483
+  90%   4653
+  95%   4697
+  98%   4720
+  99%   5984
+ 100%   7256 (longest request)
